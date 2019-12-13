@@ -45,7 +45,6 @@ class ChatBackend(object):
         try:
             client.send(json.dumps(data))
         except Exception as e:
-            print(e.message)
             self.clients[uuid].remove(client)
 
     def run(self):
